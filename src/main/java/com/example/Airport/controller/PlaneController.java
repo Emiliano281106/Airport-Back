@@ -13,6 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/planes")
+@CrossOrigin(origins = "http://localhost:5173")
 public class PlaneController {
 
     @Autowired
@@ -20,7 +21,7 @@ public class PlaneController {
     @Autowired
     PlaneRepository planeRepository;
 
-    @GetMapping
+    @GetMapping("/getPlanes")
     public ResponseEntity<List<Plane>> getAllPlanes() {
 
         List<Plane> planes = planeService.getAllPlanes();

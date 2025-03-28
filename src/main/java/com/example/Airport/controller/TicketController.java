@@ -13,6 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/tickets")
+@CrossOrigin(origins = "http://localhost:5173")
 public class TicketController {
 
     @Autowired
@@ -20,7 +21,7 @@ public class TicketController {
     @Autowired
     TicketRepository ticketRepository;
 
-    @GetMapping
+    @GetMapping("/getTickets")
     public ResponseEntity<List<Ticket>> getAllTickets(){
 
         List<Ticket> tickets = ticketService.getAllTickets();

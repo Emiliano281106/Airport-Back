@@ -14,6 +14,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/flights")
+@CrossOrigin(origins = "http://localhost:5173")
 public class FlightController {
 
     @Autowired
@@ -21,7 +22,7 @@ public class FlightController {
     @Autowired
     FlightRepository flightRepository;
 
-    @GetMapping()
+    @GetMapping("/getFlights")
     public ResponseEntity<List<Flight>> getAllFlights(){
 
         List <Flight> flights = flightService.getAllFlights();

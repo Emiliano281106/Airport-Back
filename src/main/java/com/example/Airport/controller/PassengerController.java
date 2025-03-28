@@ -13,6 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/passengers")
+@CrossOrigin(origins = "http://localhost:5173")
 public class PassengerController {
 
     @Autowired
@@ -21,7 +22,7 @@ public class PassengerController {
     @Autowired
     PassengerRepository passengerRepository;
 
-    @GetMapping
+    @GetMapping("/getPassengers")
     public ResponseEntity<List<Passenger>>getAllPassengers() {
 
         List<Passenger> passengers = passengerService.getAllPassengers();
