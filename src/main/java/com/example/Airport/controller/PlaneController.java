@@ -70,8 +70,8 @@ public class PlaneController {
         return ResponseEntity.ok("All planes deleted");
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> deletePlaneById(@PathVariable String idToDelete){
+    @DeleteMapping("/deletePLane/{id}")
+    public ResponseEntity<String> deletePlaneById(@PathVariable("id") String idToDelete){
 
        if(planeService.planeExistsById(idToDelete)){
 

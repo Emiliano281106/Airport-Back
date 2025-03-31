@@ -63,8 +63,8 @@ public class FlightController {
         return new ResponseEntity<>("All planes deleted", HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteFlightById(@PathVariable String idToDelete){
+    @DeleteMapping("/deleteFlight/{id}")
+    public ResponseEntity<String> deleteFlightById(@PathVariable("id") String idToDelete){
 
         if(flightService.flightExistsById(idToDelete)){
             flightService.deleteFlightById(idToDelete);

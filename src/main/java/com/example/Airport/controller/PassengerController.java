@@ -72,8 +72,8 @@ public class PassengerController {
         return ResponseEntity.ok("All passenger deleted!");
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> deletePassengerById(@PathVariable String idToDelete){
+    @DeleteMapping("/deletePassenger/{id}")
+    public ResponseEntity<String> deletePassengerById(@PathVariable("id") String idToDelete){
 
         if(passengerService.passengerExistsById(idToDelete)){
             passengerService.deleteById(idToDelete);

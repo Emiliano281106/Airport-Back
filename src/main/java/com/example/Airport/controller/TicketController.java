@@ -66,8 +66,8 @@ public class TicketController {
         return ResponseEntity.ok("All tickets deleted!");
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteTicketById(@PathVariable String idToDelete){
+    @DeleteMapping("/deleteTicket/{id}")
+    public ResponseEntity<String> deleteTicketById(@PathVariable("id") String idToDelete){
 
        if(!ticketService.ticketExistsById(idToDelete)){
            ticketService.deleteTicketById(idToDelete);
