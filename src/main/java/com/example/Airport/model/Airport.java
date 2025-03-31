@@ -16,12 +16,12 @@ public class Airport {
     private String country;
     private String city;
 
-    @JsonIgnore
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "Airport-Flight",
-    joinColumns = @JoinColumn(name = "Airport_ID"),
-    inverseJoinColumns = @JoinColumn(name = "Flight_ID"))
-    private List<Flight> flights;
+
+    @OneToMany(mappedBy = "departureAirport", cascade = CascadeType.ALL)
+    private List<Flight> departingFlights;
+
+    @OneToMany(mappedBy = "arrivalAirport", cascade = CascadeType.ALL)
+    private List<Flight> arrivingFlights;
 
     @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)

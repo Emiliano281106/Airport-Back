@@ -18,8 +18,14 @@ public class Flight {
     private LocalDateTime arrivalTime;
     private String status;
 
-    @ManyToMany(mappedBy = "flights")
-    private List<Airport> airports;
+
+    @ManyToOne
+    @JoinColumn(name = "departure_airport_id")
+    private Airport departureAirport;
+
+    @ManyToOne
+    @JoinColumn(name = "arrival_airport_id")
+    private Airport arrivalAirport;
 
     @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
