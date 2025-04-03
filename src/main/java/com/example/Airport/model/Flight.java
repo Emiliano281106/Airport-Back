@@ -40,12 +40,14 @@ public class Flight {
     public Flight() {
     }
 
-    public Flight(long id, String flightNumber, LocalDateTime departureTime, LocalDateTime arrivalTime, String status) {
+    public Flight(long id, String flightNumber, LocalDateTime departureTime, LocalDateTime arrivalTime, String status, Airport departureAirport, Airport arrivalAirport) {
         this.id = id;
         this.flightNumber = flightNumber;
         this.departureTime = departureTime;
         this.arrivalTime = arrivalTime;
         this.status = status;
+        this.departureAirport = departureAirport;
+        this.arrivalAirport = arrivalAirport;
     }
 
     public long getId() {
@@ -86,5 +88,21 @@ public class Flight {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Airport getDepartureAirport() {
+        return departureAirport;
+    }
+
+    public void setDepartureAirport(Airport departureAirport) {
+        this.departureAirport = departureAirport;
+    }
+
+    public Airport getArrivalAirport() {
+        return arrivalAirport;
+    }
+
+    public void setArrivalAirport(Airport arrivalAirport) {
+        this.arrivalAirport = arrivalAirport;
     }
 }
