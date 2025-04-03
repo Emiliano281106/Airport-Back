@@ -18,8 +18,6 @@ public class PlaneController {
 
     @Autowired
     PlaneService planeService;
-    @Autowired
-    PlaneRepository planeRepository;
 
     @GetMapping("/getPlanes")
     public ResponseEntity<List<Plane>> getAllPlanes() {
@@ -50,9 +48,9 @@ public class PlaneController {
     }
 
     @PostMapping("/createPlane")
-    public ResponseEntity<List<Plane>> createPlanes(@RequestBody List<Plane> planes) {
-        List<Plane> savedPlanes = planeRepository.saveAll(planes);
-        return ResponseEntity.ok(savedPlanes);
+    public ResponseEntity<Plane> createPlane(@RequestBody Plane plane) {
+        Plane savedPlane = planeService.createPlane(plane);
+        return ResponseEntity.ok(savedPlane);
     }
 
     @PutMapping("/updatePlane/{id}")

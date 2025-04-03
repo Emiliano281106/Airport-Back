@@ -18,8 +18,6 @@ public class TicketController {
 
     @Autowired
     private TicketService ticketService;
-    @Autowired
-    TicketRepository ticketRepository;
 
     @GetMapping("/getTickets")
     public ResponseEntity<List<Ticket>> getAllTickets(){
@@ -44,9 +42,9 @@ public class TicketController {
     }
 
     @PostMapping("/createTicket")
-    public ResponseEntity<List<Ticket>> createTickets(@RequestBody List<Ticket> tickets) {
-        List<Ticket> savedTickets = ticketRepository.saveAll(tickets);
-        return ResponseEntity.ok(savedTickets);
+    public ResponseEntity<Ticket> createTicket(@RequestBody Ticket ticket) {
+        Ticket savedTicket = ticketService.createTicket(ticket);
+        return ResponseEntity.ok(savedTicket);
     }
 
     @PutMapping("/updateTicket/{id}")

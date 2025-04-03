@@ -19,8 +19,6 @@ public class FlightController {
 
     @Autowired
     private FlightService flightService;
-    @Autowired
-    FlightRepository flightRepository;
 
     @GetMapping("/getFlights")
     public ResponseEntity<List<Flight>> getAllFlights(){
@@ -44,9 +42,9 @@ public class FlightController {
     }
 
     @PostMapping("/createFlight")
-    public ResponseEntity<List<Flight>> createFlights(@RequestBody List<Flight> flights) {
-        List<Flight> savedFlights = flightRepository.saveAll(flights);
-        return ResponseEntity.ok(savedFlights);
+    public ResponseEntity<Flight> createFlight(@RequestBody Flight flight) {
+        Flight savedFlight = flightService.createFlight(flight);
+        return ResponseEntity.ok(savedFlight);
     }
 
     @PutMapping("/updateFlight/{id}")
