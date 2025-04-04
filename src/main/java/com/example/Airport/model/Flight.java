@@ -2,13 +2,18 @@ package com.example.Airport.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import org.hibernate.annotations.GenericGenerator;
+import lombok.*;
+
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Flight {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,15 +23,20 @@ public class Flight {
     private LocalDateTime arrivalTime;
     private String status;
 
-
+    @Getter
+    @Setter
     @ManyToOne
     @JoinColumn(name = "departure_airport_id")
     private Airport departureAirport;
 
+    @Getter
+    @Setter
     @ManyToOne
     @JoinColumn(name = "arrival_airport_id")
     private Airport arrivalAirport;
 
+    @Getter
+    @Setter
     @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "Flight-Plane",
@@ -37,72 +47,5 @@ public class Flight {
     @ManyToMany(mappedBy = "flights", fetch = FetchType.EAGER)
     private List<Ticket> tickets;
 
-    public Flight() {
-    }
 
-    public Flight(long id, String flightNumber, LocalDateTime departureTime, LocalDateTime arrivalTime, String status, Airport departureAirport, Airport arrivalAirport) {
-        this.id = id;
-        this.flightNumber = flightNumber;
-        this.departureTime = departureTime;
-        this.arrivalTime = arrivalTime;
-        this.status = status;
-        this.departureAirport = departureAirport;
-        this.arrivalAirport = arrivalAirport;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getFlightNumber() {
-        return flightNumber;
-    }
-
-    public void setFlightNumber(String flightNumber) {
-        this.flightNumber = flightNumber;
-    }
-
-    public LocalDateTime getDepartureTime() {
-        return departureTime;
-    }
-
-    public void setDepartureTime(LocalDateTime departureTime) {
-        this.departureTime = departureTime;
-    }
-
-    public LocalDateTime getArrivalTime() {
-        return arrivalTime;
-    }
-
-    public void setArrivalTime(LocalDateTime arrivalTime) {
-        this.arrivalTime = arrivalTime;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public Airport getDepartureAirport() {
-        return departureAirport;
-    }
-
-    public void setDepartureAirport(Airport departureAirport) {
-        this.departureAirport = departureAirport;
-    }
-
-    public Airport getArrivalAirport() {
-        return arrivalAirport;
-    }
-
-    public void setArrivalAirport(Airport arrivalAirport) {
-        this.arrivalAirport = arrivalAirport;
-    }
 }
