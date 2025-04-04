@@ -22,13 +22,11 @@ public class Plane {
     private int yearOfManufacture;
 
 
-    @Getter
-    @Setter
+
     @ManyToMany(mappedBy = "planes", fetch = FetchType.EAGER)
     private List<Airport> airports;
 
-    @Getter
-    @Setter
+
     @ManyToMany(mappedBy = "planes", fetch = FetchType.EAGER)
     private List<Flight> flights;
 

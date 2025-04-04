@@ -21,8 +21,7 @@ public class Passenger {
     private String email;
     private int age;
 
-    @Getter
-    @Setter
+
     @OneToMany(mappedBy = "passenger")
     private List<Ticket> tickets;
 

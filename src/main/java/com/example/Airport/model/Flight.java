@@ -23,20 +23,18 @@ public class Flight {
     private LocalDateTime arrivalTime;
     private String status;
 
-    @Getter
-    @Setter
+
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "departure_airport_id")
     private Airport departureAirport;
 
-    @Getter
-    @Setter
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "arrival_airport_id")
     private Airport arrivalAirport;
 
-    @Getter
-    @Setter
+
     @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "Flight-Plane",

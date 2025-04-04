@@ -20,8 +20,7 @@ public class Ticket {
     private String flightClass;
     private String boardingZone;
 
-    @Getter
-    @Setter
+
     @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "ticket-flight",
@@ -29,9 +28,9 @@ public class Ticket {
     inverseJoinColumns = @JoinColumn(name = "Flight_ID"))
     private List<Flight> flights;
 
-    @Getter
-    @Setter
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "passenger_Id")
     private Passenger passenger;
 
 

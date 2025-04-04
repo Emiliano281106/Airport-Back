@@ -20,18 +20,14 @@ public class Airport {
     private String country;
     private String city;
 
-    @Getter
-    @Setter
+
     @OneToMany(mappedBy = "departureAirport", cascade = CascadeType.ALL)
     private List<Flight> departingFlights;
 
-    @Getter
-    @Setter
+
     @OneToMany(mappedBy = "arrivalAirport", cascade = CascadeType.ALL)
     private List<Flight> arrivingFlights;
 
-    @Getter
-    @Setter
     @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "Airport-Plane",
