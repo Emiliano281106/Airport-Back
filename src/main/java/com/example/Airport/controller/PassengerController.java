@@ -19,8 +19,7 @@ public class PassengerController {
     @Autowired
     PassengerService passengerService;
 
-    @Autowired
-    PassengerRepository passengerRepository;
+
 
     @GetMapping("/getPassengers")
     public ResponseEntity<List<Passenger>>getAllPassengers() {
@@ -51,9 +50,9 @@ public class PassengerController {
 
 
     @PostMapping("/createPassenger")
-    public ResponseEntity<List<Passenger>> createPassengers(@RequestBody List<Passenger> passengers) {
-        List<Passenger> savedPassengers = passengerRepository.saveAll(passengers);
-        return ResponseEntity.ok(savedPassengers);
+    public ResponseEntity<Passenger> createPassenger(@RequestBody Passenger passenger) {
+        Passenger savedPassenger = passengerService.createPassenger(passenger);
+        return ResponseEntity.ok(savedPassenger);
     }
 
     @PutMapping("/updatePassenger/{id}")

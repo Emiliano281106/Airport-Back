@@ -1,11 +1,15 @@
 package com.example.Airport.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import java.util.List;
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Airport {
 
     @Id
@@ -17,10 +21,11 @@ public class Airport {
     private String city;
 
 
-    @OneToMany(mappedBy = "departureAirport", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "departureAirport")
     private List<Flight> departingFlights;
 
-    @OneToMany(mappedBy = "arrivalAirport", cascade = CascadeType.ALL)
+
+    @OneToMany(mappedBy = "arrivalAirport")
     private List<Flight> arrivingFlights;
 
     @JsonIgnore
@@ -31,55 +36,5 @@ public class Airport {
     private List<Plane> planes;
 
 
-    public Airport() {
-    }
 
-    public Airport(long id, String code, String name, String country, String city) {
-
-        this.id = id;
-        this.code = code;
-        this.name = name;
-        this.country = country;
-        this.city = city;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
 }

@@ -19,9 +19,6 @@ public class AirportController {
     @Autowired
     AirportService airportService;
 
-    @Autowired
-    AirportRepository airportRepository;
-
     @GetMapping("/getAirports")
     @CrossOrigin(origins = "http://localhost:5173")
     public ResponseEntity<List<Airport>> getAllAirports() {
@@ -54,9 +51,9 @@ public class AirportController {
     }
 
     @PostMapping("/createAirport")
-    public ResponseEntity<List<Airport>> createAirports(@RequestBody List<Airport> airports) {
-        List<Airport> savedAirports = airportRepository.saveAll(airports);
-        return ResponseEntity.ok(savedAirports);
+    public ResponseEntity<Airport> createAirport(@RequestBody Airport airport) {
+        Airport savedAirport = airportService.createAirport(airport);
+        return ResponseEntity.ok(savedAirport);
     }
 
     @PutMapping("/updateAirport/{id}")
