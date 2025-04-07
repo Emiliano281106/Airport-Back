@@ -43,6 +43,7 @@ public class FlightController {
 
     @PostMapping("/createFlight")
     public ResponseEntity<Flight> createFlight(@RequestBody Flight flight) {
+        System.out.println(flight);
         Flight savedFlight = flightService.createFlight(flight);
         return ResponseEntity.ok(savedFlight);
     }

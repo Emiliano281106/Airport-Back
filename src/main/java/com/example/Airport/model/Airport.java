@@ -21,11 +21,11 @@ public class Airport {
     private String city;
 
 
-    @OneToMany(mappedBy = "departureAirport", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "departureAirport")
     private List<Flight> departingFlights;
 
 
-    @OneToMany(mappedBy = "arrivalAirport", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "arrivalAirport")
     private List<Flight> arrivingFlights;
 
     @JsonIgnore

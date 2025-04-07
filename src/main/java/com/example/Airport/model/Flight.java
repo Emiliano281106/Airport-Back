@@ -25,12 +25,12 @@ public class Flight {
 
 
     @JsonIgnore
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "departure_airport_id")
     private Airport departureAirport;
 
     @JsonIgnore
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "arrival_airport_id")
     private Airport arrivalAirport;
 
