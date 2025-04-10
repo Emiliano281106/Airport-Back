@@ -1,0 +1,7 @@
+POST https://localhost:8080/api/airports/createAirport
+Content-Type: application/json
+
+{
+  "id": 999,
+  "value": "content"
+}
