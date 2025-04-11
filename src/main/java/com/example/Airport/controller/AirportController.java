@@ -56,6 +56,12 @@ public class AirportController {
         return ResponseEntity.ok(savedAirport);
     }
 
+    @PostMapping("/batchCreateAirports")
+    public ResponseEntity<List<Airport>> createAirports(@RequestBody List<Airport> airports) {
+        List<Airport> savedAirports = airportService.createAirports(airports);
+        return ResponseEntity.ok(savedAirports);
+    }
+
     @PutMapping("/updateAirport/{id}")
     public ResponseEntity<Airport> updateAirport(@PathVariable String id, @RequestBody Airport airport){
 
