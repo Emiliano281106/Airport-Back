@@ -1,0 +1,185 @@
+POST http://localhost:8080/api/airports/batchCreateAirports
+Content-Type: application/json
+
+[
+  {
+    "code": "JFK",
+    "name": "John F. Kennedy International Airport",
+    "country": "United States",
+    "city": "New York"
+  },
+  {
+    "code": "LAX",
+    "name": "Los Angeles International Airport",
+    "country": "United States",
+    "city": "Los Angeles"
+  },
+  {
+    "code": "LHR",
+    "name": "Heathrow Airport",
+    "country": "United Kingdom",
+    "city": "London"
+  },
+  {
+    "code": "CDG",
+    "name": "Charles de Gaulle Airport",
+    "country": "France",
+    "city": "Paris"
+  },
+  {
+    "code": "DXB",
+    "name": "Dubai International Airport",
+    "country": "United Arab Emirates",
+    "city": "Dubai"
+  },
+  {
+    "code": "HND",
+    "name": "Haneda Airport",
+    "country": "Japan",
+    "city": "Tokyo"
+  },
+  {
+    "code": "FRA",
+    "name": "Frankfurt Airport",
+    "country": "Germany",
+    "city": "Frankfurt"
+  },
+  {
+    "code": "SIN",
+    "name": "Singapore Changi Airport",
+    "country": "Singapore",
+    "city": "Singapore"
+  },
+  {
+    "code": "ICN",
+    "name": "Incheon International Airport",
+    "country": "South Korea",
+    "city": "Seoul"
+  },
+  {
+    "code": "AMS",
+    "name": "Amsterdam Airport Schiphol",
+    "country": "Netherlands",
+    "city": "Amsterdam"
+  },
+  {
+    "code": "PEK",
+    "name": "Beijing Capital International Airport",
+    "country": "China",
+    "city": "Beijing"
+  },
+  {
+    "code": "SYD",
+    "name": "Sydney Kingsford Smith Airport",
+    "country": "Australia",
+    "city": "Sydney"
+  },
+  {
+    "code": "YYZ",
+    "name": "Toronto Pearson International Airport",
+    "country": "Canada",
+    "city": "Toronto"
+  },
+  {
+    "code": "MAD",
+    "name": "Adolfo Suárez Madrid–Barajas Airport",
+    "country": "Spain",
+    "city": "Madrid"
+  },
+  {
+    "code": "MIA",
+    "name": "Miami International Airport",
+    "country": "United States",
+    "city": "Miami"
+  },
+  {
+    "code": "BKK",
+    "name": "Suvarnabhumi Airport",
+    "country": "Thailand",
+    "city": "Bangkok"
+  },
+  {
+    "code": "SFO",
+    "name": "San Francisco International Airport",
+    "country": "United States",
+    "city": "San Francisco"
+  },
+  {
+    "code": "MUC",
+    "name": "Munich Airport",
+    "country": "Germany",
+    "city": "Munich"
+  },
+  {
+    "code": "ORD",
+    "name": "O'Hare International Airport",
+    "country": "United States",
+    "city": "Chicago"
+  },
+  {
+    "code": "DEL",
+    "name": "Indira Gandhi International Airport",
+    "country": "India",
+    "city": "New Delhi"
+  },
+  {
+    "code": "IST",
+    "name": "Istanbul Airport",
+    "country": "Turkey",
+    "city": "Istanbul"
+  },
+  {
+    "code": "HKG",
+    "name": "Hong Kong International Airport",
+    "country": "Hong Kong",
+    "city": "Hong Kong"
+  },
+  {
+    "code": "CPT",
+    "name": "Cape Town International Airport",
+    "country": "South Africa",
+    "city": "Cape Town"
+  },
+  {
+    "code": "GRU",
+    "name": "São Paulo/Guarulhos International Airport",
+    "country": "Brazil",
+    "city": "São Paulo"
+  },
+  {
+    "code": "DOH",
+    "name": "Hamad International Airport",
+    "country": "Qatar",
+    "city": "Doha"
+  },
+  {
+    "code": "ATH",
+    "name": "Athens International Airport",
+    "country": "Greece",
+    "city": "Athens"
+  },
+  {
+    "code": "VIE",
+    "name": "Vienna International Airport",
+    "country": "Austria",
+    "city": "Vienna"
+  },
+  {
+    "code": "ZRH",
+    "name": "Zürich Airport",
+    "country": "Switzerland",
+    "city": "Zürich"
+  },
+  {
+    "code": "ARN",
+    "name": "Stockholm Arlanda Airport",
+    "country": "Sweden",
+    "city": "Stockholm"
+  },
+  {
+    "code": "OSL",
+    "name": "Oslo Gardermoen Airport",
+    "country": "Norway",
+    "city": "Oslo"
+  }
+]

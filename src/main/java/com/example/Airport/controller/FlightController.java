@@ -59,7 +59,7 @@ public class FlightController {
 
         flightService.deleteAllFlights();
 
-        return new ResponseEntity<>("All planes deleted", HttpStatus.OK);
+        return new ResponseEntity<>("All flights deleted", HttpStatus.OK);
     }
 
     @DeleteMapping("/deleteFlight/{id}")

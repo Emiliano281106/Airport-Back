@@ -1,0 +1,185 @@
+POST http://localhost:8080/api/planes/batchCreatePlanes
+Content-Type: application/json
+
+[
+  {
+    "model": "747-8",
+    "manufacturer": "Boeing",
+    "capacity": 467,
+    "yearOfManufacture": 2018
+  },
+  {
+    "model": "A380-800",
+    "manufacturer": "Airbus",
+    "capacity": 853,
+    "yearOfManufacture": 2015
+  },
+  {
+    "model": "787-9 Dreamliner",
+    "manufacturer": "Boeing",
+    "capacity": 296,
+    "yearOfManufacture": 2019
+  },
+  {
+    "model": "A350-900",
+    "manufacturer": "Airbus",
+    "capacity": 325,
+    "yearOfManufacture": 2020
+  },
+  {
+    "model": "E190-E2",
+    "manufacturer": "Embraer",
+    "capacity": 114,
+    "yearOfManufacture": 2021
+  },
+  {
+    "model": "737 MAX 8",
+    "manufacturer": "Boeing",
+    "capacity": 178,
+    "yearOfManufacture": 2022
+  },
+  {
+    "model": "A320neo",
+    "manufacturer": "Airbus",
+    "capacity": 194,
+    "yearOfManufacture": 2021
+  },
+  {
+    "model": "CRJ-900",
+    "manufacturer": "Bombardier",
+    "capacity": 90,
+    "yearOfManufacture": 2017
+  },
+  {
+    "model": "Citation X+",
+    "manufacturer": "Cessna",
+    "capacity": 12,
+    "yearOfManufacture": 2018
+  },
+  {
+    "model": "G650ER",
+    "manufacturer": "Gulfstream",
+    "capacity": 19,
+    "yearOfManufacture": 2020
+  },
+  {
+    "model": "777-300ER",
+    "manufacturer": "Boeing",
+    "capacity": 396,
+    "yearOfManufacture": 2019
+  },
+  {
+    "model": "A330-900neo",
+    "manufacturer": "Airbus",
+    "capacity": 287,
+    "yearOfManufacture": 2020
+  },
+  {
+    "model": "An-124 Ruslan",
+    "manufacturer": "Antonov",
+    "capacity": 88,
+    "yearOfManufacture": 2004
+  },
+  {
+    "model": "C-130J Super Hercules",
+    "manufacturer": "Lockheed Martin",
+    "capacity": 92,
+    "yearOfManufacture": 2015
+  },
+  {
+    "model": "757-200",
+    "manufacturer": "Boeing",
+    "capacity": 228,
+    "yearOfManufacture": 2005
+  },
+  {
+    "model": "A340-600",
+    "manufacturer": "Airbus",
+    "capacity": 380,
+    "yearOfManufacture": 2012
+  },
+  {
+    "model": "767-300ER",
+    "manufacturer": "Boeing",
+    "capacity": 269,
+    "yearOfManufacture": 2014
+  },
+  {
+    "model": "A220-300",
+    "manufacturer": "Airbus",
+    "capacity": 160,
+    "yearOfManufacture": 2021
+  },
+  {
+    "model": "717-200",
+    "manufacturer": "Boeing",
+    "capacity": 125,
+    "yearOfManufacture": 2001
+  },
+  {
+    "model": "Falcon 8X",
+    "manufacturer": "Dassault",
+    "capacity": 16,
+    "yearOfManufacture": 2019
+  },
+  {
+    "model": "727-200",
+    "manufacturer": "Boeing",
+    "capacity": 189,
+    "yearOfManufacture": 1983
+  },
+  {
+    "model": "MD-11",
+    "manufacturer": "McDonnell Douglas",
+    "capacity": 323,
+    "yearOfManufacture": 1995
+  },
+  {
+    "model": "707-320",
+    "manufacturer": "Boeing",
+    "capacity": 219,
+    "yearOfManufacture": 1978
+  },
+  {
+    "model": "A310-300",
+    "manufacturer": "Airbus",
+    "capacity": 220,
+    "yearOfManufacture": 1998
+  },
+  {
+    "model": "747SP",
+    "manufacturer": "Boeing",
+    "capacity": 331,
+    "yearOfManufacture": 1989
+  },
+  {
+    "model": "Concorde",
+    "manufacturer": "Aérospatiale/BAC",
+    "capacity": 128,
+    "yearOfManufacture": 1976
+  },
+  {
+    "model": "Tu-154M",
+    "manufacturer": "Tupolev",
+    "capacity": 180,
+    "yearOfManufacture": 1991
+  },
+  {
+    "model": "Il-96-400",
+    "manufacturer": "Ilyushin",
+    "capacity": 436,
+    "yearOfManufacture": 2009
+  },
+  {
+    "model": "747-400",
+    "manufacturer": "Boeing",
+    "capacity": 416,
+    "yearOfManufacture": 2005
+  },
+  {
+    "model": "A319neo",
+    "manufacturer": "Airbus",
+    "capacity": 160,
+    "yearOfManufacture": 2022
+  }
+]

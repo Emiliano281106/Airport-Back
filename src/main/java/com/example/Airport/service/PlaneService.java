@@ -34,6 +34,10 @@ public class PlaneService {
         return planeRepository.save(plane);
     }
 
+    public List<Plane> createPlanes(List<Plane> planes) {
+        return planeRepository.saveAll(planes);
+    }
+
     public Plane updatePlane(String id, Plane plane) {
         Plane planeToUpdate = planeRepository.findById(id).orElse(null);
 

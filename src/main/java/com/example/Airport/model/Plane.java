@@ -14,8 +14,9 @@ import java.util.List;
 public class Plane {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    private String id;
     private String model;
     private String manufacturer;
     private int capacity;

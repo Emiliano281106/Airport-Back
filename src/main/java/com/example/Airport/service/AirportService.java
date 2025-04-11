@@ -25,6 +25,10 @@ public class AirportService {
         return airportRepository.save(airport);
     }
 
+    public List<Airport> createAirports(List<Airport> airports){
+        return airportRepository.saveAll(airports);
+    }
+
     public Airport updateAirport(String id, Airport airport) {
         Airport airportToUpdate = airportRepository.findById(id).orElse(null);
 

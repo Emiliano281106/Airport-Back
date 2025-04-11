@@ -39,6 +39,7 @@ public class FlightService {
         flightToUpdate.setArrivalTime(flight.getArrivalTime());
         flightToUpdate.setArrivalAirport(flight.getArrivalAirport());
         flightToUpdate.setDepartureAirport(flight.getDepartureAirport());
+        flightToUpdate.setPlanes(flight.getPlanes());
 
         return flightRepository.save(flightToUpdate);
     }
