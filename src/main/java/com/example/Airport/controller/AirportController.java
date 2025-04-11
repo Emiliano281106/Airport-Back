@@ -57,7 +57,7 @@ public class AirportController {
     }
 
     @PutMapping("/updateAirport/{id}")
-    public ResponseEntity<Airport> updateAirport(@PathVariable String id, @RequestBody Airport airport){
+    public ResponseEntity<Airport> updateAirport(@PathVariable ("id")String id, @RequestBody Airport airport){
 
         airportService.updateAirport(id,airport);
 
