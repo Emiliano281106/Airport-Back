@@ -53,6 +53,12 @@ public class PlaneController {
         return ResponseEntity.ok(savedPlane);
     }
 
+    @PostMapping("/batchCreatePlanes")
+    public ResponseEntity<List<Plane>> createPlanes(@RequestBody List<Plane> planes) {
+        List<Plane> savedPlanes = planeService.createPlanes(planes);
+        return ResponseEntity.ok(savedPlanes);
+    }
+
     @PutMapping("/updatePlane/{id}")
     public ResponseEntity<Plane> updatePlane(@PathVariable String id, @RequestBody Plane plane){
 
