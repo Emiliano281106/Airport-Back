@@ -13,14 +13,9 @@ import java.util.List;
 public class Airport {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "airport_seq")
-    @SequenceGenerator(
-            name = "airport_seq",
-            sequenceName = "airport_sequence",
-            initialValue = 1,
-            allocationSize = 1
-    )
-    private long id;
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    private String id;
     private String code;
     private String name;
     private String country;

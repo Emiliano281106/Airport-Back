@@ -14,14 +14,9 @@ import java.util.List;
 public class Plane {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "plane_seq")
-    @SequenceGenerator(
-            name = "plane_seq",
-            sequenceName = "plane_sequence",
-            initialValue = 1,
-            allocationSize = 1
-    )
-    private long id;
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    private String id;
     private String model;
     private String manufacturer;
     private int capacity;

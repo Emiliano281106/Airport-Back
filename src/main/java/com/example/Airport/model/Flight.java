@@ -3,6 +3,7 @@ package com.example.Airport.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
 
 
 import java.time.LocalDateTime;
@@ -16,14 +17,9 @@ public class Flight {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "flight_seq")
-    @SequenceGenerator(
-            name = "flight_seq",
-            sequenceName = "flight_sequence",
-            initialValue = 1,
-            allocationSize = 1
-    )
-    private long id;
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    private String id;
     private String flightNumber;
     private LocalDateTime departureTime;
     private LocalDateTime arrivalTime;
